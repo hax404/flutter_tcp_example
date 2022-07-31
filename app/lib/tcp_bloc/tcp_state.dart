@@ -20,7 +20,7 @@ class TcpState {
 
   factory TcpState.initial() {
     return TcpState(
-      connectionState: SocketConnectionState.None, 
+      connectionState: SocketConnectionState.None,
       messages: <Message>[]
     );
   }
@@ -37,8 +37,8 @@ class TcpState {
 
   TcpState copyWithNewMessage({required Message message}) {
     return TcpState(
-      connectionState: this.connectionState,
-      messages: List.from(this.messages)..add(message),
+      connectionState: SocketConnectionState.Connected,
+      messages: List.from(messages)..add(message),
     );
   }
 }
